@@ -10,20 +10,37 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    
-    @IBOutlet weak var displayLabel: UILabel!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
+    // MARK: - Outlets
+    @IBOutlet weak var display: UILabel!
 
+
+    // MARK: - Private Properties
+    private var userIsTyping = false
+    private var displayValue: Double {
+        get {
+            return Double(display.text!)!
+        }
+        set {
+            display.text = String(newValue)
+        }
+    }
+    
+
+    // MARK: - Input Handeling
     @IBAction func operandButtonPressed(sender: UIButton) {
-        displayLabel.text = sender.currentTitle!
+        
+        // Extract the entered digit from the current title
+        let digit = sender.currentTitle!
+
+        // Update the displaytext depending on whether the user is typing or not
+        display.text = userIsTyping ? display.text! + digit : digit
+        
+        // The user is now typing since he just entered a digit
+        userIsTyping = true
     }
     
     @IBAction func operatorButtonPressed(sender: UIButton) {
-    
+        print(sender.currentTitle!)
     }
     
 }

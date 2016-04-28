@@ -14,6 +14,7 @@
 		8761A32F1CD1079200C315E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8761A32D1CD1079200C315E7 /* LaunchScreen.storyboard */; };
 		8761A33A1CD1079200C315E7 /* calculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8761A3391CD1079200C315E7 /* calculatorTests.swift */; };
 		8761A3451CD1079200C315E7 /* calculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8761A3441CD1079200C315E7 /* calculatorUITests.swift */; };
+		8761A3541CD2730000C315E7 /* CalculatorCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8761A3531CD2730000C315E7 /* CalculatorCore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		8761A3401CD1079200C315E7 /* calculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = calculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8761A3441CD1079200C315E7 /* calculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calculatorUITests.swift; sourceTree = "<group>"; };
 		8761A3461CD1079200C315E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8761A3531CD2730000C315E7 /* CalculatorCore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorCore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				8761A3521CD107C400C315E7 /* Supporting files */,
 				8761A3261CD1079200C315E7 /* ViewController.swift */,
+				8761A3531CD2730000C315E7 /* CalculatorCore.swift */,
 				8761A3281CD1079200C315E7 /* Main.storyboard */,
 			);
 			path = calculator;
@@ -269,6 +272,7 @@
 			files = (
 				8761A3271CD1079200C315E7 /* ViewController.swift in Sources */,
 				8761A3251CD1079200C315E7 /* AppDelegate.swift in Sources */,
+				8761A3541CD2730000C315E7 /* CalculatorCore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

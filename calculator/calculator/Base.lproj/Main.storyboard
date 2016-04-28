@@ -215,7 +215,7 @@
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="displayLabel" destination="8gP-dg-9a2" id="OIk-RR-311"/>
+                        <outlet property="display" destination="8gP-dg-9a2" id="48P-kx-QgV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
