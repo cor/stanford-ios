@@ -12,7 +12,20 @@ class CalculatorCore {
     
     // MARK: - Properties
     private var accumulator = 0.0
-    private var operations = Dictionary<String, Operation>()
+    private var operations = [String:Operation]()
+    private var history = [String]()
+    
+    internal var description: String {
+        get {
+            return history.joinWithSeparator(" ")
+        }
+    }
+    
+    internal var resultIsPartial: Bool {
+        get {
+            return pending != nil
+        }
+    }
     
     // MARK: - Initalization
     init() {
@@ -24,7 +37,7 @@ class CalculatorCore {
         // Constants
         operations["π"] = .constant(M_PI)
         operations["e"] = .constant(M_E)
-        operations["C"] = .constant(0.0)
+        operations["C"] = .constant(Double(0))
         
         // Unary Operations
         operations["√"] =   .unaryOperation(sqrt)
@@ -53,6 +66,7 @@ class CalculatorCore {
     
     internal func setOperand(operand: Double) {
         accumulator = operand
+        history.append(String(operand))
     }
     
     internal func performOperation(symbol: String) {
@@ -71,8 +85,14 @@ class CalculatorCore {
         } else {
             print("Operation \(symbol) doesn't exist")
         }
+        history.append(symbol)
     }
     
+    internal func reset() {
+        accumulator = 0.0
+        pending = nil
+        history = []
+    }
     
     // MARK: - Binary Operation Logic
     private struct PendingBinaryOperationInfo {

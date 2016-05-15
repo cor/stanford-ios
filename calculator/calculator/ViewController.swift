@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     
     // MARK: - Outlets
     @IBOutlet private weak var display: UILabel!
-
+    @IBOutlet private weak var descriptionDisplay: UILabel!
     
 
     // MARK: - Private Properties
@@ -28,6 +28,12 @@ class ViewController: UIViewController {
         }
     }
     
+    private func updateDescriptionDisplay() {
+        descriptionDisplay.text = core.description
+        if core.resultIsPartial {
+            descriptionDisplay.text! += " ..."
+        }
+    }
 
     // MARK: - Input Handeling
     @IBAction private func operandButtonPressed(sender: UIButton) {
@@ -40,6 +46,24 @@ class ViewController: UIViewController {
         
         // The user is now typing since he just entered a digit
         userIsTyping = true
+        updateDescriptionDisplay()
+    }
+    
+    @IBAction func pointButtonPressed(sender: UIButton) {
+    
+        // Check if the number already contains a decimal point
+        if !display.text!.containsString(".") {
+            // If it doesn't, add a decimal point
+            display.text! += "."
+        }
+        updateDescriptionDisplay()
+    }
+    
+    @IBAction func clearButtonPressed(sender: UIButton) {
+        // Reset everything
+        core.reset()
+        updateDescriptionDisplay()
+        displayValue = core.result
     }
     
     @IBAction private func operatorButtonPressed(sender: UIButton) {
@@ -56,6 +80,7 @@ class ViewController: UIViewController {
         }
         
         displayValue = core.result
+        updateDescriptionDisplay()
     }
     
 }
