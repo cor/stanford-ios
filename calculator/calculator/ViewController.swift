@@ -10,9 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    private var core = CalculatorCore()
+    
     // MARK: - Outlets
-    @IBOutlet weak var display: UILabel!
+    @IBOutlet private weak var display: UILabel!
 
+    
 
     // MARK: - Private Properties
     private var userIsTyping = false
@@ -27,7 +30,7 @@ class ViewController: UIViewController {
     
 
     // MARK: - Input Handeling
-    @IBAction func operandButtonPressed(sender: UIButton) {
+    @IBAction private func operandButtonPressed(sender: UIButton) {
         
         // Extract the entered digit from the current title
         let digit = sender.currentTitle!
@@ -39,8 +42,20 @@ class ViewController: UIViewController {
         userIsTyping = true
     }
     
-    @IBAction func operatorButtonPressed(sender: UIButton) {
-        print(sender.currentTitle!)
+    @IBAction private func operatorButtonPressed(sender: UIButton) {
+        
+        if userIsTyping {
+            core.setOperand(displayValue)
+            userIsTyping = false
+        }
+        
+        userIsTyping = false
+        
+        if let mathematicalSymbol = sender.currentTitle {
+            core.performOperation(mathematicalSymbol)
+        }
+        
+        displayValue = core.result
     }
     
 }
