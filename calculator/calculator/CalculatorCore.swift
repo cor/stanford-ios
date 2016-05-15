@@ -36,7 +36,7 @@ class CalculatorCore {
         // Binary Operations
         operations["×"] = .binaryOperation(*)
         operations["+"] = .binaryOperation(+)
-        operations["-"] = .binaryOperation(-)
+        operations["−"] = .binaryOperation(-)
         operations["÷"] = .binaryOperation(/)
         
         // Equals
