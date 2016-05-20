@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		87BD02DF1CEB8CED00FEBBE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BD02DE1CEB8CED00FEBBE1 /* AppDelegate.swift */; };
-		87BD02E11CEB8CED00FEBBE1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BD02E01CEB8CED00FEBBE1 /* ViewController.swift */; };
+		87BD02E11CEB8CED00FEBBE1 /* FaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BD02E01CEB8CED00FEBBE1 /* FaceViewController.swift */; };
 		87BD02E41CEB8CED00FEBBE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87BD02E21CEB8CED00FEBBE1 /* Main.storyboard */; };
 		87BD02E61CEB8CED00FEBBE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87BD02E51CEB8CED00FEBBE1 /* Assets.xcassets */; };
 		87BD02E91CEB8CED00FEBBE1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87BD02E71CEB8CED00FEBBE1 /* LaunchScreen.storyboard */; };
+		87BD02F21CEB8E1000FEBBE1 /* FaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BD02F11CEB8E1000FEBBE1 /* FaceView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		87BD02DB1CEB8CED00FEBBE1 /* FaceIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87BD02DE1CEB8CED00FEBBE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		87BD02E01CEB8CED00FEBBE1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		87BD02E01CEB8CED00FEBBE1 /* FaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceViewController.swift; sourceTree = "<group>"; };
 		87BD02E31CEB8CED00FEBBE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		87BD02E51CEB8CED00FEBBE1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		87BD02E81CEB8CED00FEBBE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		87BD02EA1CEB8CED00FEBBE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87BD02F11CEB8E1000FEBBE1 /* FaceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,23 @@
 		87BD02DD1CEB8CED00FEBBE1 /* FaceIt */ = {
 			isa = PBXGroup;
 			children = (
-				87BD02DE1CEB8CED00FEBBE1 /* AppDelegate.swift */,
-				87BD02E01CEB8CED00FEBBE1 /* ViewController.swift */,
+				87BD02F01CEB8D6400FEBBE1 /* Supporting files */,
+				87BD02E01CEB8CED00FEBBE1 /* FaceViewController.swift */,
+				87BD02F11CEB8E1000FEBBE1 /* FaceView.swift */,
 				87BD02E21CEB8CED00FEBBE1 /* Main.storyboard */,
+			);
+			path = FaceIt;
+			sourceTree = "<group>";
+		};
+		87BD02F01CEB8D6400FEBBE1 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				87BD02DE1CEB8CED00FEBBE1 /* AppDelegate.swift */,
 				87BD02E51CEB8CED00FEBBE1 /* Assets.xcassets */,
 				87BD02E71CEB8CED00FEBBE1 /* LaunchScreen.storyboard */,
 				87BD02EA1CEB8CED00FEBBE1 /* Info.plist */,
 			);
-			path = FaceIt;
+			name = "Supporting files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,8 +147,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87BD02E11CEB8CED00FEBBE1 /* ViewController.swift in Sources */,
+				87BD02E11CEB8CED00FEBBE1 /* FaceViewController.swift in Sources */,
 				87BD02DF1CEB8CED00FEBBE1 /* AppDelegate.swift in Sources */,
+				87BD02F21CEB8E1000FEBBE1 /* FaceView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
